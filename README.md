@@ -28,6 +28,19 @@ This project is a smart medical assistant that extracts and analyzes data from u
 
 ---
 
+## Setup Instructions
+
+### Step 1: Install dependencies
+
+Make sure you have Python 3.9+ installed.
+
+Then run:
+
+```bash
+pip install fastapi uvicorn crewai crewai-tools pymupdf
+
+---
+
 ## API Endpoint
 
 ### `POST /analyze`
@@ -44,16 +57,3 @@ This project is a smart medical assistant that extracts and analyzes data from u
   "analysis": "Hemoglobin: 11.4\nWBC: 7900\n...",
   "file_processed": "report.pdf"
 }
-
----
-
-## Setup Instructions
-
-### Step 1: Install dependencies
-
-Make sure you have Python 3.9+ installed.
-
-Then run:
-
-```bash
-pip install fastapi uvicorn crewai crewai-tools pymupdf
