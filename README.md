@@ -28,6 +28,25 @@ This project is a smart medical assistant that extracts and analyzes data from u
 
 ---
 
+## API Endpoint
+
+### `POST /analyze`
+
+**Form fields:**
+- `file` (PDF): Your blood test report
+- `query` (text): Your question (e.g., "Is my WBC normal?")
+
+**Returns:**
+```json
+{
+  "status": "success",
+  "query": "Is my hemoglobin normal?",
+  "analysis": "Hemoglobin: 11.4\nWBC: 7900\n...",
+  "file_processed": "report.pdf"
+}
+
+---
+
 ## Setup Instructions
 
 ### Step 1: Install dependencies
