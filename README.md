@@ -1,7 +1,7 @@
 # Blood Test Analyzer using CrewAI & FastAPI
 
 This project is a smart medical assistant that extracts and analyzes data from uploaded blood test PDF reports using CrewAI and FastAPI.
-
+(Originally developed as part of a skill assessment task)
 ---
 
 ## Features
