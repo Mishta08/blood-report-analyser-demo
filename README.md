@@ -9,6 +9,8 @@ This project is designed for portfolio/demo purposes — no heavy AI frameworks 
 -REST API implemented using FastAPI
 -Lightweight and easy to run on any machine
 
+---------------
+
 **Installation**
 
 1. Clone the repository:
@@ -17,13 +19,14 @@ cd blood-test-analyser-demo
 
 2. Create a virtual environment (optional but recommended):
 python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
-source .venv/bin/activate
+.venv\Scripts\activate (For windows)
+
+source .venv/bin/activate (For mac/linux)
 
 3. Install dependencies:
 pip install -r requirements.txt
+
+----------------
 
 **Usage**
 
@@ -38,6 +41,8 @@ http://127.0.0.1:8000/docs
 -Enter a query like “Summarize my blood report”
 -Click Execute to see the JSON response
 
+--------------------
+
 **Project Structure**
 blood-test-analyser-demo/
 │
@@ -47,6 +52,8 @@ blood-test-analyser-demo/
 ├─ blood_test_report.pdf # Example PDF for demo
 ├─ requirements.txt  # Dependencies
 └─ README.md         # Project overview and instructions
+
+---------------------
 
 **Example Response**
 {
