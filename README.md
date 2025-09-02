@@ -1,59 +1,57 @@
-# Blood Test Analyzer using CrewAI & FastAPI
+**Blood Test Report Analyser (Demo)**
 
-This project is a smart medical assistant that extracts and analyzes data from uploaded blood test PDF reports using CrewAI and FastAPI.
-(Originally developed as part of a skill assessment task)
----
+A lightweight Python demo project that extracts key information from blood test PDFs and provides simulated doctor-like recommendations via a FastAPI backend.
+This project is designed for portfolio/demo purposes — no heavy AI frameworks or complex dependencies are required.
 
-## Features
+**Features**
+-Extracts text from uploaded PDF blood test reports
+-Provides a simulated “doctor analysis” and recommendations
+-REST API implemented using FastAPI
+-Lightweight and easy to run on any machine
 
-- Upload a blood test report PDF
-- Extract key lab values (like Hemoglobin, WBC, Glucose, etc.)
-- Use LLM agent logic (via CrewAI) to simulate a response to medical queries
-- FastAPI backend for easy REST integration
+**Installation**
 
----
+1. Clone the repository:
+git clone https://github.com/yourusername/blood-test-analyser-demo.git
+cd blood-test-analyser-demo
 
-## Bugs Fixed
+2. Create a virtual environment (optional but recommended):
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
 
-### 1. `tools.py`
-- Issue: Did not extract any lab values properly
-- Fix: Rewrote regex patterns and added fallback handling for missing values
+3. Install dependencies:
+pip install -r requirements.txt
 
-### 2. `main.py`
-- Issue: File was saved but not passed correctly to the tool
-- Fix: Confirmed file path and query were correctly passed to the `BloodTestReportTool`
+**Usage**
 
-### 3. `crewai_tools` import error
-- Added instructions to install `crewai-tools` and `pymupdf` correctly
+1. Run the FastAPI server:
+uvicorn main:app --reload
 
----
+2. Open the interactive docs in your browser:
+http://127.0.0.1:8000/docs
 
-## API Endpoint
+3. Test the /analyze endpoint:
+-Upload a PDF file (e.g., sample_report.pdf)
+-Enter a query like “Summarize my blood report”
+-Click Execute to see the JSON response
 
-### `POST /analyze`
+**Project Structure**
+blood-test-analyser-demo/
+│
+├─ main.py           # FastAPI backend
+├─ tools.py          # PDF text extraction
+├─ agents.py         # Simulated doctor responses
+├─ blood_test_report.pdf # Example PDF for demo
+├─ requirements.txt  # Dependencies
+└─ README.md         # Project overview and instructions
 
-**Form fields:**
-- `file` (PDF): Your blood test report
-- `query` (text): Your question (e.g., "Is my WBC normal?")
-
-**Returns:**
-```json
+**Example Response**
 {
   "status": "success",
-  "query": "Is my hemoglobin normal?",
-  "analysis": "Hemoglobin: 11.4\nWBC: 7900\n...",
-  "file_processed": "report.pdf"
+  "query": "Summarize my blood report",
+  "analysis": "Doctor's analysis for query: Summarize my blood report\n\nSummary of your blood report: ...\nRecommendations:\n- Stay hydrated\n- Eat balanced diet\n- Consult a doctor for abnormal values\n",
+  "file_processed": "sample_report.pdf"
 }
-
----
-
-## Setup Instructions
-
-### Step 1: Install dependencies
-
-Make sure you have Python 3.9+ installed.
-
-Then run:
-
-```bash
-pip install fastapi uvicorn crewai crewai-tools pymupdf
