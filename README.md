@@ -19,7 +19,9 @@ cd blood-test-analyser-demo
 
 2. Create a virtual environment (optional but recommended):
 python -m venv .venv
+
 .venv\Scripts\activate (For windows)
+
 
 source .venv/bin/activate (For mac/linux)
 
