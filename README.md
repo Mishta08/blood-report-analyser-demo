@@ -14,7 +14,7 @@ This project is designed for portfolio/demo purposes — no heavy AI frameworks 
 **Installation**
 
 1. Clone the repository:
-git clone https://github.com/yourusername/blood-test-analyser-demo.git
+git clone https://github.com/Mishta08/blood-test-analyser-demo.git
 cd blood-test-analyser-demo
 
 2. Create a virtual environment (optional but recommended):
