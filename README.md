@@ -43,18 +43,6 @@ http://127.0.0.1:8000/docs
 -Enter a query like “Summarize my blood report”
 -Click Execute to see the JSON response
 
---------------------
-
-**Project Structure**
-blood-test-analyser-demo/
-│
-├─ main.py           # FastAPI backend
-├─ tools.py          # PDF text extraction
-├─ agents.py         # Simulated doctor responses
-├─ blood_test_report.pdf # Example PDF for demo
-├─ requirements.txt  # Dependencies
-└─ README.md         # Project overview and instructions
-
 ---------------------
 
 **Example Response**
